@@ -1,0 +1,60 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+.vscode/
+
+# Rider / JetBrains IDEs
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Visual Studio Code settings
+*.code-workspace
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+*.psmdcp
+
+# Logs
+*.log
+
+# Others
+*.vspscc
+*.vssscc
+_TestResults/
+TestResults/
+*.pidb
+*.svclog
+*.scc
+*.dbmdl
+*.bak
+*.cache
+*.pdb
+
+# Publish output
+publish/
+dist/
+out/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# DotCover
+.idea.DotSettings.user
+*.dotCover
