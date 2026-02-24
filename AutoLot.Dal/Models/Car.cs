@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AutoLot.Dal.Models;
 
@@ -9,5 +10,4 @@ public class Car
     public string Color { get; set; }
     public string PetName { get; set; }
     public byte[] TimeStamp { get; set; }
-
 }
