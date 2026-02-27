@@ -15,7 +15,7 @@ public class ApplicationDbContext:DbContext
     public DbSet<Car> Cars {get;set;}
     public DbSet<Make> Makes {get;set;}
     public DbSet<Radio> Radios {get;set;}
-    public DbSet<Driver> Driver {get;set;}
+    public DbSet<Driver> Drivers {get;set;}
     public DbSet<CarDriver> CarsToDrivers {get;set;}
     public DbSet<CarMakeViewModel> CarMakeViewModels {get;set;}
     private void ChangeTracker_Tracked(object sender, EntityTrackedEventArgs e)

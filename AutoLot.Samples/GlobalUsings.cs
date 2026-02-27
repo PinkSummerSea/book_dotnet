@@ -9,3 +9,5 @@ global using AutoLot.Samples;
 global using AutoLot.Samples.Models.Configuration;
 global using AutoLot.Samples.ViewModels;
 global using AutoLot.Samples.ViewModels.Configuration;
+global using AutoLot.Samples.Models;
+global using Microsoft.EntityFrameworkCore.Storage.ValueConversion;

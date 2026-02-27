@@ -12,6 +12,17 @@ public class Car:BaseEntity
     public string PetName { get; set; }
     public int MakeId {get;set;}
     [ForeignKey(nameof(MakeId))]
+    public string Price {get;set;}
+    private bool? _isDrivable;
+    public bool IsDrivable
+    {
+        get => _isDrivable ?? true;
+        set => _isDrivable = value;
+    }
+    [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+    public string Display { get; set; }
+    public DateTime? DateBuilt { get; set; }
+    [Required, StringLength(50)]
     public Make MakeNavigation {get;set;}
     public Radio RadioNavigation {get;set;}
     [InverseProperty(nameof(Driver.Cars))]

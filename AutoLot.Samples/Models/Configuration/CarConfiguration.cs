@@ -32,5 +32,17 @@ public class CarConfiguration : IEntityTypeConfiguration<Car>
                    {
                        j.HasKey(cd => new { cd.CarId, cd.DriverId });
                    });
+        
+        builder.Property(e => e.DateBuilt).HasDefaultValueSql("getdate()");
+        builder.Property(e => e.IsDrivable)
+            .HasField("_isDrivable")
+            .HasDefaultValue(true);
+        builder.Property(e => e.TimeStamp)
+            .IsRowVersion()
+            .IsConcurrencyToken();
+        builder.Property(e => e.Display).HasComputedColumnSql("[PetName] + ' (' + [Color] + ')'", stored: true);
+        builder.HasQueryFilter(e => e.IsDrivable == true);
+        builder.Property(e => e.Price).HasConversion(new StringToNumberConverter<decimal>());
+        //builder.ToTable(b=>b.IsTemporal());
     }
 }
